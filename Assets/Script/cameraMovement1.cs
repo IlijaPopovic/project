@@ -13,6 +13,7 @@ public class cameraMovement1 : MonoBehaviour
     private float cameraTransition = 0.0f;
     private float startAnimationDuration = 3.0f;
     public bool isCameraAnimationFinished = false;
+    public float playerHeight = 15.0f;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class cameraMovement1 : MonoBehaviour
 
     private void FolowPlayer()
     {
-        cameraMove = new Vector3(cameraDistanceFromPlayer.x, cameraDistanceFromPlayer.y + 15/*visina igraca*/, playerPosition.position.z + cameraDistanceFromPlayer.z);
+        cameraMove = new Vector3(cameraDistanceFromPlayer.x, cameraDistanceFromPlayer.y + playerHeight, playerPosition.position.z + cameraDistanceFromPlayer.z);
         transform.position = cameraMove;
     }
 
